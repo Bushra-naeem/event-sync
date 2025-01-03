@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "./EventForm.css";
+import "./EventList.css";
 
 const EventForm = ({ onEventAdd }) => {
   const [newEvent, setNewEvent] = useState({

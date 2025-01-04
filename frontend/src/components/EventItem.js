@@ -1,4 +1,3 @@
-// src/EventItem.js
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 
@@ -35,7 +34,7 @@ const EventItem = ({ event, onEventDelete, onToggleReminder, onEventEdit }) => {
   };
 
   const handleSaveClick = () => {
-    // Perform the update in the database (you may use an API request here)
+    // Perform the update in the database
     onEventEdit(event._id, {
       title: editedTitle,
       date: editedDate,
@@ -75,8 +74,16 @@ const EventItem = ({ event, onEventDelete, onToggleReminder, onEventEdit }) => {
             <h3 className="event-title">{event.title}</h3>
             <hr />
             <span className="event-date">
-              <span style={{ fontWeight: "700" }}>Event On:</span>
-              {moment(event.date).add(1, "days").calendar()};
+              <span style={{ fontWeight: "700" }}>Event On: </span>
+              {/* {moment(event.date).local().calendar()} */}
+              {moment(event.date).local().calendar(null, {
+                sameDay: "[Today]",
+                nextDay: "[Tomorrow]",
+                nextWeek: "dddd",
+                lastDay: "[Yesterday]",
+                lastWeek: "[Last] dddd",
+                sameElse: "DD/MM/YYYY",
+              })}
             </span>
           </>
         )}

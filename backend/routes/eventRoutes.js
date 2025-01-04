@@ -1,5 +1,6 @@
-import { Router as router } from "express";
+import express from "express";
 import Event from "../models/Event.js";
+const router = express.Router();
 
 // Get all events
 router.get("/", async (req, res) => {

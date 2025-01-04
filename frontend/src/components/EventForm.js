@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "./EventList.css";
+import "./style.css";
 
 const EventForm = ({ onEventAdd }) => {
   const [newEvent, setNewEvent] = useState({
@@ -19,7 +19,6 @@ const EventForm = ({ onEventAdd }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // create a new event
     axios
       .post("http://localhost:5000/api/events", newEvent)
       .then((response) => {

@@ -80,7 +80,7 @@ function App() {
 
   return (
     <div className="main-container">
-      <h1>Event Management App</h1>
+      <h1>Event Sync</h1>
       <EventForm onEventAdd={handleEventAdd} />
       <EventList
         events={events}

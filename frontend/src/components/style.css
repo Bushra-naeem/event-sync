@@ -4,30 +4,34 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  font-family: monospace;
+  letter-spacing: -0.025em;
 }
 
 .event-list {
   display: flex;
   flex-wrap: wrap;
+  width: 480px;
 }
 
 .event-card {
-  background-color: #d2e3c8;
+  background-color: lightgrey;
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
-  width: 200px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px;
+  width: 190px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .event-card:hover {
-  box-shadow: 0 4px 8px green;
+  box-shadow: 0 4px 6px;
 }
 
 .event-info {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .event-title {
@@ -49,19 +53,19 @@ body {
 }
 
 .rem-para {
-  background-color: green;
+  background-color: lightgrey;
   color: white;
   padding: 2px;
   width: fit-content;
 
   position: relative;
   left: -1px;
-  bottom: 22px;
+  bottom: 15px;
 }
 
 input {
   padding: 5px;
-  width: 500px;
+  width: 420px;
 }
 
 form {
@@ -69,10 +73,10 @@ form {
   flex-direction: column;
   justify-content: center;
   border: 2px solid white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
-  gap: 5px;
-  background: #ae00ff;
+  gap: 4px;
+  background: lightgrey;
 }
 
 .main-container {
@@ -80,9 +84,45 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #333333;
 }
 
 label {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  body {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .event-list {
+    width: 100%;
+    padding: 0 14px;
+    margin: 10px;
+  }
+
+  .event-card {
+    width: 100%;
+    margin: 12px;
+    padding: 20px;
+  }
+
+  input {
+    width: auto;
+    padding: 8px;
+  }
+
+  form {
+    width: 90%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .rem-para {
+    left: 0;
+    bottom: 0;
+  }
 }

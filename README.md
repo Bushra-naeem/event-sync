@@ -1,4 +1,4 @@
-# Event Sync - MERN Stack App
+# Event Sync
 
 ## Introduction
 
@@ -40,7 +40,7 @@ Event Sync is a full-stack web app built using the tech stack (MongoDB, Express.
 
 ## Technologies Used
 
-- **Frontend:** React.js, Redux, Tailwind CSS
+- **Frontend:** React.js, CSS
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 
@@ -115,7 +115,6 @@ Ensure you have the following installed:
 
 - Navigate to http://localhost:3000 to access the frontend.
 - Backend runs on http://localhost:5000.
-- Register a new account or log in with existing credentials.
 - Create, view, and manage events.
 
 ## Deployment
